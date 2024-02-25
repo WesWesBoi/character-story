@@ -1,0 +1,59 @@
+public class JuriAdventure : MonoBehaviour
+{
+    private bool inDigitalWorld = false;
+
+    void Start()
+    {
+        Debug.Log("Juri initialized in the real world.");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!inDigitalWorld)
+            {
+                EnterDigitalWorld();
+            }
+            else
+            {
+                ExitDigitalWorld();
+            }
+        }
+    }
+
+    void EnterDigitalWorld()
+    {
+        Debug.Log("Juri entering DebugWorld.exe...");
+
+        // Transform Juri into a digital avatar
+        this.gameObject.SetActive(false);
+
+        // Simulate the digital transformation
+        Debug.Log("Debug.Log initializing Juri.exe...");
+        inDigitalWorld = true;
+
+        // Juri's virtual adventure begins
+        Debug.Log("Juri.exe - Adventure Start!");
+        Debug.Log("Juri's Taekwondo skills now controlled by code.");
+
+        // Juri kicks and punches in the virtual realm
+        Debug.Log("Debug.Log: KickCombo executed successfully!");
+
+        // Further coding challenges and power-ups
+        // ...
+
+        // Juri encounters and defeats a digital bug boss
+        Debug.Log("BugBoss defeated - system stabilized.");
+
+        // Exiting the digital world
+        ExitDigitalWorld();
+    }
+
+    void ExitDigitalWorld()
+    {
+        Debug.Log("Exiting Juri.exe - Returning to the real world.");
+
+        // Transition out of the digital world
+        inDigitalWorld = false;
+    }
